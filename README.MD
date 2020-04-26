@@ -1,20 +1,20 @@
-#Gerador de UUID v4
+# Gerador de UUID v4
 
 Esse é uma API bem simples feito em kotlin, utilizando o framework Ktor, que gera um UUID aleatório.
 
 O intuito é mostrar como subir uma aplicação rodando docker no heroku.
 Faça um fork do código, e siga os comando abaixo.
 
-##Tecnologias usadas
+## Tecnologias usadas
 * KTOR - Servidor de Aplicação
 * DOCKER - Conteiner que armazena a aplicação
 * HEROKU - Armazenamento do docker
 
-#Preparar o HEROKU
+# Preparar o HEROKU
 * Fazer uma conta
 * Criar um novo app chamado `generator-uuid`
 
-#Como subir a aplicação pelo Ubuntu
+# Como subir a aplicação pelo Ubuntu
 CRTL+ALT+T para abrir o terminal
 
 Vá até a pasta raiz do projeto, para rodar os comandos.
