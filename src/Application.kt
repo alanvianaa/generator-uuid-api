@@ -20,7 +20,7 @@ fun Application.module() {
 
     routing {
         get("/") {
-            call.respondText(UUID.randomUUID().toString(), contentType = ContentType.Text.Plain)
+            call.respondText(UUID.randomUUID().toString())
         }
     }
 }
