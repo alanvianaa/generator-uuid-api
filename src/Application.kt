@@ -22,10 +22,6 @@ fun Application.module() {
         get("/") {
             call.respondText(UUID.randomUUID().toString(), contentType = ContentType.Text.Plain)
         }
-
-        get("/json/gson") {
-            call.respond(mapOf("hello" to "world"))
-        }
     }
 }
 
