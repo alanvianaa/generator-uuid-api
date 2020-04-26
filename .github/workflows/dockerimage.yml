@@ -1,0 +1,29 @@
+name: Docker Image CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
+          
+    - uses: actions/checkout@v2
+    - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
+      id: heroku
+      uses: jctaveras/heroku-deploy@v1.0.0  # use the latest version of the action
+      with:
+        email: alanviana.nascimento@gmail.com # your heroku email
+        api_key: 218f2c67-10fc-491e-ac2c-b5ab1a481eee # your  heroku api key
+        app_name: generator-uuid # you aplication name
+        dockerfile: '' # set the path to the folder wher the Dokerfile is located
