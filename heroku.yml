@@ -1,8 +1,7 @@
 build:
-  docker:
-    web: Dockerfile
-release:
   command:
     - ./gradlew build
+  docker:
+    web: Dockerfile
 run:
   web: -a generator-uuid
