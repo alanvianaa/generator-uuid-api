@@ -26,4 +26,4 @@ jobs:
         email: alanviana.nascimento@gmail.com # your heroku email
         api_key: 218f2c67-10fc-491e-ac2c-b5ab1a481eee # your  heroku api key
         app_name: generator-uuid # you aplication name
-        dockerfile: '' # set the path to the folder wher the Dokerfile is located
+        dockerfile: Dockerfile # set the path to the folder wher the Dokerfile is located
