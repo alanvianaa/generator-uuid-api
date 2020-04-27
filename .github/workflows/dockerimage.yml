@@ -10,15 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-          - name: Grant execute permission for gradlew
-            run: chmod +x gradlew
-          - name: Build with Gradle
-            run: ./gradlew build
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+        - name: Grant execute permission for gradlew
+          run: chmod +x gradlew
+        - name: Build with Gradle
+          run: ./gradlew build
     - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
-
       id: heroku
       uses: jctaveras/heroku-deploy@v1.0.0  # use the latest version of the action
       with:
